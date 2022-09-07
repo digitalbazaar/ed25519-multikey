@@ -29,7 +29,10 @@ module.exports = function(config) {
 
     webpack: {
       mode: 'development',
-      devtool: 'inline-source-map'
+      devtool: 'inline-source-map',
+      experiments: {
+        topLevelAwait: true,
+      },
     },
 
     // test results reporter to use
