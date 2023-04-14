@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.0.1 - 2023-TBD
+## 1.0.1 - 2023-04-14
 
 ### Fixed
 - Update `.from()` method to not modify key input.
