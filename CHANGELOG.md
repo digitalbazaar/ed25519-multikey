@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.0.2 - 2024-01-dd
+## 1.0.2 - 2024-01-25
 
 ### Fixed
 - Do not export undefined fields for `secretKeyMultibase` and `revoked`
