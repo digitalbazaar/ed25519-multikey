@@ -18,7 +18,8 @@
   ],
   "dependencies": {
     "@noble/ed25519": "^1.6.0",
-    "base58-universal": "^2.0.0"
+    "base58-universal": "^2.0.0",
+    "base64url-universal": "^2.0.0"
   },
   "devDependencies": {
     "@digitalbazaar/ed25519-verification-key-2018": "^4.0.0",
@@ -28,9 +29,9 @@
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "eslint": "^8.16.0",
-    "eslint-config-digitalbazaar": "^3.0.0",
-    "eslint-plugin-jsdoc": "^39.3.2",
-    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-config-digitalbazaar": "^5.0.1",
+    "eslint-plugin-jsdoc": "^48.2.1",
+    "eslint-plugin-unicorn": "^51.0.1",
     "karma": "^6.3.20",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.1",
