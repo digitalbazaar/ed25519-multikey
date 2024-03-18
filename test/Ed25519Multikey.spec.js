@@ -1,9 +1,9 @@
 /*!
- * Copyright (c) 2020-2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2020-2024 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
 import * as base58btc from 'base58-universal';
 import {mockKey, seed} from './mock-data.js';
+import chai from 'chai';
 import multibase from 'multibase';
 import multicodec from 'multicodec';
 const should = chai.should();

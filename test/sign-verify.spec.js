@@ -1,13 +1,13 @@
 /*!
- * Copyright (c) 2020 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2020-2024 Digital Bazaar, Inc. All rights reserved.
  */
 import chai from 'chai';
 chai.should();
 
+import * as base58btc from 'base58-universal';
 import * as Ed25519Multikey from '../lib/index.js';
 import {mockKey, suites} from './mock-data.js';
 import {stringToUint8Array} from './text-encoder.js';
-import * as base58btc from 'base58-universal';
 
 const keyPair = await Ed25519Multikey.from({
   controller: 'did:example:1234',

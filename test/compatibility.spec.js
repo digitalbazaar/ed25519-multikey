@@ -1,13 +1,13 @@
 /*!
- * Copyright (c) 2020-2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2020-2024 Digital Bazaar, Inc. All rights reserved.
  */
 import chai from 'chai';
 chai.should();
 
 import * as Ed25519Multikey from '../lib/index.js';
-import {stringToUint8Array} from './text-encoder.js';
 import * as StableLibEd25519 from '@stablelib/ed25519';
 import {randomBytes} from 'node:crypto';
+import {stringToUint8Array} from './text-encoder.js';
 
 import {promisify} from 'node:util';
 
