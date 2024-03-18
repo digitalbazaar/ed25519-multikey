@@ -1,5 +1,10 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
+## 1.1.0 - 2024-mm-dd
+
+### Added
+- Enable loading keys from `publicKeyJwk` and converting to/from JWK.
+
 ## 1.0.2 - 2024-01-25
 
 ### Fixed
