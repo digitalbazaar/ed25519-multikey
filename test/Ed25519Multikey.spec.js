@@ -151,6 +151,23 @@ describe('Ed25519Multikey', () => {
       expect(await imported.export({publicKey: true, secretKey: true}))
         .to.eql(exported);
     });
+    it('should import with `@context` array', async () => {
+      // Encoding returns a 64 byte uint8array, seed needs to be 32 bytes
+      const seedBytes = (new TextEncoder()).encode(seed).slice(0, 32);
+      const keyPair = await Ed25519Multikey.generate({
+        seed: seedBytes, controller: 'did:example:1234'
+      });
+      const exported = await keyPair.export({
+        publicKey: true, secretKey: true
+      });
+      const imported = await Ed25519Multikey.from({
+        ...exported,
+        '@context': [{}, exported['@context']]
+      });
+
+      expect(await imported.export({publicKey: true, secretKey: true}))
+        .to.eql(exported);
+    });
     it('should load `publicKeyJwk`', async () => {
       const jwk = {
         crv: 'Ed25519',

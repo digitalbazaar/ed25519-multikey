@@ -6,6 +6,9 @@
 - Enable loading keys from `publicKeyJwk` via `from()` and converting
   to/from JWK.
 
+### Fixed
+- Allow `@context` array values in multikeys.
+
 ## 1.0.2 - 2024-01-25
 
 ### Fixed
