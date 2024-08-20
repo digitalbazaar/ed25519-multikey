@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.2.0 - 2024-08-dd
+## 1.2.0 - 2024-08-20
 
 ### Added
 - Allow 32-byte or 64-byte secret key values. The actual secret part of
