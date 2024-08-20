@@ -1,5 +1,13 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
+## 1.2.0 - 2024-08-dd
+
+### Added
+- Allow 32-byte or 64-byte secret key values. The actual secret part of
+  the secret key is the first 32 bytes, but some implementations concatenate
+  the public key (an additional 32 bytes) onto the "secret key bytes"; this
+  feature allows either to be used.
+
 ## 1.1.0 - 2024-03-17
 
 ### Added
