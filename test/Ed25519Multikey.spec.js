@@ -186,6 +186,33 @@ describe('Ed25519Multikey', () => {
       expect(exported1).to.eql(jwk);
       expect(exported2).to.eql(jwk);
     });
+    it('should load `publicKeyJwk` w/id and controller', async () => {
+      const jwk = {
+        crv: 'Ed25519',
+        kty: 'OKP',
+        x: '11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo'
+      };
+      const imported1 = await Ed25519Multikey.from({
+        type: 'JsonWebKey',
+        id: 'urn:id:1#0',
+        controller: 'urn:id:1',
+        publicKeyJwk: jwk
+      });
+      const imported2 = await Ed25519Multikey.from({
+        type: 'JsonWebKey',
+        id: 'urn:id:1#0',
+        controller: 'urn:id:1',
+        publicKeyJwk: jwk
+      });
+      imported1.id.should.equal('urn:id:1#0');
+      imported1.controller.should.equal('urn:id:1');
+      imported2.id.should.equal('urn:id:1#0');
+      imported2.controller.should.equal('urn:id:1');
+      const exported1 = await Ed25519Multikey.toJwk({keyPair: imported1});
+      const exported2 = await Ed25519Multikey.toJwk({keyPair: imported2});
+      expect(exported1).to.eql(jwk);
+      expect(exported2).to.eql(jwk);
+    });
   });
 
   describe('Backwards compat with Ed25519VerificationKey2018', () => {

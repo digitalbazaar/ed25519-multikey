@@ -1,5 +1,11 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
+## 1.3.0 - 2024-10-dd
+
+### Added
+- Include `id` and `controller` properties when importing key types of
+  `JsonWebKey` or `JsonWebKey2020`.
+
 ## 1.2.0 - 2024-08-20
 
 ### Added
