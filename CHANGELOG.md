@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.3.0 - 2024-10-dd
+## 1.3.0 - 2024-10-02
 
 ### Added
 - Include `id` and `controller` properties when importing key types of
