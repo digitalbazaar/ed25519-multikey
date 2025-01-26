@@ -111,6 +111,17 @@ describe('Ed25519Multikey', () => {
       expect(exported).to.have.property('id', 'did:ex:123#test-id');
       expect(exported).to.have.property('type', 'Multikey');
     });
+
+    it('should export raw private key w/canonical length', async () => {
+      const keyPair = await Ed25519Multikey.generate({
+        id: 'did:ex:123#test-id'
+      });
+      const exported = await keyPair.export({
+        raw: true, secretKey: true, canonicalize: true
+      });
+      expect(exported).to.have.property('secretKey');
+      expect(exported.secretKey.length).to.equal(32);
+    });
   });
 
   describe('from', () => {
