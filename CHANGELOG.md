@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.3.1 - 2025-mm-dd
+## 1.3.1 - 2025-01-26
 
 ### Fixed
 - Fix canonicalized raw secret key export length.
